@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const getMovies = async (inputValue) => {
       const response = await fetch(
-        `http://www.omdbapi.com/?s=${inputValue}&apikey=623a5030`
+        `https://www.omdbapi.com/?s=${inputValue}&apikey=623a5030`
       );
       const data = await response.json();
       return data;
