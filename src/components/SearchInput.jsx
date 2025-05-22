@@ -1,6 +1,6 @@
 import "./SearchInput.css";
 
-export const SearchForm = ({ setInputValue }) => {
+export const SearchForm = ({ setInputValue, inputValue }) => {
   return (
     <div className="search">
       <input
@@ -10,6 +10,7 @@ export const SearchForm = ({ setInputValue }) => {
           setInputValue(e.target.value);
           console.log(e.target.value);
         }}
+        defaultValue={inputValue}
       />
     </div>
   );

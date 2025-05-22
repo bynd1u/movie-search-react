@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("like it?");
 
   useEffect(() => {
     const getMovies = async (inputValue) => {
@@ -30,8 +30,8 @@ function App() {
 
   return (
     <>
-      <Header title="Movie Search" />
-      <SearchForm setInputValue={setInputValue} />
+      <Header title="Movies Search" />
+      <SearchForm setInputValue={setInputValue} inputValue={inputValue} />
       <MovieList movies={movies} />
     </>
   );
